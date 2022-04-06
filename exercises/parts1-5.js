@@ -42,9 +42,7 @@ var Spacecraft = /** @class */ (function () {
         return daysToLocation;
     };
     Spacecraft.prototype.printDaysToLocation = function (location) {
-        //console.log(`${this.name} would take ${this.getDaysToLocation(location.kilometersAway)} days to get to ${location.name}.`);
-        spaceShuttle.printDaysToLocation(new SpaceLocation_1.SpaceLocation('Mars', kilometersToMars));
-        spaceShuttle.printDaysToLocation(new SpaceLocation_1.SpaceLocation('the Moon', kilometersToMoon));
+        console.log("".concat(this.name, " would take ").concat(this.getDaysToLocation(location.kilometersAway), " days to get to ").concat(location.name, "."));
     };
     return Spacecraft;
 }());
@@ -52,7 +50,9 @@ var Spacecraft = /** @class */ (function () {
 var spaceShuttle = new Spacecraft('Determination', 17500);
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
-console.log("The ".concat(spaceShuttle.name, " takes ").concat(spaceShuttle.getDaysToLocation(kilometersToMars), "days to travel to Mars"));
+spaceShuttle.printDaysToLocation(new SpaceLocation_1.SpaceLocation('Mars', kilometersToMars));
+spaceShuttle.printDaysToLocation(new SpaceLocation_1.SpaceLocation('the Moon', kilometersToMoon));
+//console.log(`The ${spaceShuttle.name} takes ${spaceShuttle.getDaysToLocation(kilometersToMars)}days to travel to Mars`);
 // Part 5: Export and Import the SpaceLocation Class
 // Add the required import statement BEFORE the part 1 concent.
 // Add the printDaysToLocation function to the Spacecraft class.
